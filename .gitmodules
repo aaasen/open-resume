@@ -1,3 +1,6 @@
 [submodule "submodules/fontawesome"]
 	path = submodules/fontawesome
 	url = git://github.com/FortAwesome/Font-Awesome.git
+[submodule "submodules/chartjs"]
+	path = submodules/chartjs
+	url = git://github.com/nnnick/Chart.js.git
