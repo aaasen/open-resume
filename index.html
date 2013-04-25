@@ -10,12 +10,15 @@
 		<link rel="stylesheet" href="submodules/fontawesome/css/font-awesome.css">
 		
 		<script src="assets/js/jquery-2.0.0.min.js"></script>
+		<script src="submodules/chartjs/Chart.min.js"></script>
 		<script src="assets/js/mixpanel.js"></script>
 	</head>
  
 	<body>
 		<div class="content">
-			<p>hello</p>
+			<h3 id="username">aaasen</h1>
+
+			<canvas id="canvas" height="400" width="400"></canvas>
 		</div>
 		
 		<script type="text/javascript">
@@ -23,6 +26,32 @@
 
 			});
 		</script>
+
+		<script>
+
+			var radarChartData = {
+				labels : ["Eating","Drinking","Sleeping","Designing","Coding","Partying","Running"],
+				datasets : [
+					{
+						fillColor : "rgba(220,220,220,0.5)",
+						strokeColor : "rgba(220,220,220,1)",
+						pointColor : "rgba(220,220,220,1)",
+						pointStrokeColor : "#fff",
+						data : [65,59,90,81,56,55,40]
+					},
+					{
+						fillColor : "rgba(151,187,205,0.5)",
+						strokeColor : "rgba(151,187,205,1)",
+						pointColor : "rgba(151,187,205,1)",
+						pointStrokeColor : "#fff",
+						data : [28,48,40,19,96,27,100]
+					}
+				]
+				
+			}
+
+		var myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+		
+		</script>
 	</body>
 </html>
-
